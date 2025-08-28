@@ -1,6 +1,3 @@
-//npm init
-//npx nodemon index.js ou node --watch index.js
-//npm install readline-sync
 import teclado from 'readline-sync'
 
 /*let d
