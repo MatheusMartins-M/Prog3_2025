@@ -33,7 +33,7 @@ export default function Questionario(props){
         }
 
         if(novoAcertos + novoErros == perguntas.length){
-            props.onFinalizou()
+            props.onFinalizou(novoPerguntas)
         }
     }
 
