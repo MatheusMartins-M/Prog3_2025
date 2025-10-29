@@ -1,10 +1,10 @@
-import { useState } from "react";
+//import { useState } from "react";
 import Forca from "./Forca";
 import Teclado from "./Teclado";
 
 export default function JogoDaForca(props){
     const palavra = props.palavra
-    const [tentativas, setTentativas] = useState(3);
+    //const [tentativas, setTentativas] = useState(3);
 
     return(
         <div>
@@ -12,7 +12,7 @@ export default function JogoDaForca(props){
             <br/>
             <Teclado />
             <br/>
-            Tentativas erradas: {tentativas}/{tentativas}
+            
         </div>
     );
 };

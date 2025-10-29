@@ -1,15 +1,36 @@
+import { useState } from "react";
+
 export default function Teclado (){
-    const tecla = [
-        'A', 'B', 'C', 'D', 'E', 'F', 'G', 
-        'H', 'I', 'J', 'K', 'L', 'M', 'N', 
-        'O', 'P', 'Q', 'R', 'S', 'T', 'U', 
-        'V', 'W', 'X', 'Y', 'Z'
+    const alfabeto = [
+        {id: 1, letra: "A", clicou: false}, {id: 2, letra: "B", clicou: false}, {id: 3, letra: "C", clicou: false}, {id: 4, letra: "D", clicou: false},
+        {id: 5, letra: "E", clicou: false}, {id: 6, letra: "F", clicou: false}, {id: 7, letra: "G", clicou: false}, {id: 8, letra: "H", clicou: false},
+        {id: 9, letra: "I", clicou: false}, {id: 10, letra: "J", clicou: false}, {id: 11, letra: "K", clicou: false}, {id: 12, letra: "L", clicou: false},
+        {id: 13, letra: "M", clicou: false}, {id: 14, letra: "N", clicou: false}, {id: 15, letra: "O", clicou: false}, {id: 16, letra: "P", clicou: false},
+        {id: 17, letra: "Q", clicou: false}, {id: 18, letra: "R", clicou: false}, {id: 19, letra: "S", clicou: false}, {id: 20, letra: "T", clicou: false},
+        {id: 21, letra: "U", clicou: false}, {id: 22, letra: "V", clicou: false}, {id: 23, letra: "W", clicou: false}, {id: 24, letra: "X", clicou: false},
+        {id: 25, letra: "Y", clicou: false}, {id: 26, letra: "Z", clicou: false}, 
     ];
+
+    const [letras, setLetras] = useState(alfabeto)
+
+    function clicar(id) {
+        const novoClicou = letras.map((letra) => {
+            if (letra.id === id) {
+                return { ...letra, clicou: true };
+            }
+
+            return letra;
+        });
+
+        setLetras(novoClicou);
+    }
+
+    console.log(letras)
 
     return(
         <div className="teclado">
-            {tecla.map((letra) => (
-                <button key={letra}>{letra}</button>
+            {letras.map((tecla) => (
+                <button disabled={tecla.clicou == true} key={tecla.id} onClick={() => clicar(tecla.id)}>{tecla.letra}</button>
             ))}
         </div>
     );
