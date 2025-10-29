@@ -10,7 +10,7 @@ export default function Forca(props) {
     ))
 
     const [digitos, setDigitos] = useState(palavraInicial)
-    const [tentativas, setTentativas] = useState(3)
+    //const [tentativas, setTentativas] = useState(3)
 
     function atualizaDigito(valor, id){
         let novosDigitos
@@ -28,14 +28,14 @@ export default function Forca(props) {
         setDigitos(novosDigitos)
     }
 
-    function compara(){
+    /*function compara(){
         let errado = digitos.find((digito) => 
             digito.valorClicado != digito.valorCorreto)
 
         if(errado){
             setTentativas(tentativas - 1)
         }
-    }
+    }*/
 
     
 
