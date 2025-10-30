@@ -1,7 +1,34 @@
-import { useState } from "react";
+//import { useState } from "react";
 
-export default function Teclado (){
-    const alfabeto = [
+export default function Teclado(props) {
+    const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+    return (
+        <div className="teclado">
+            {alfabeto.map((letra) => (
+                <button
+                    key={letra}
+                    disabled={props.letrasTentadas.includes(letra)}
+                    onClick={() => props.onLetraClicou(letra)}
+                    style={{ margin: "2px" }}
+                >
+                    {letra}
+                </button>
+            ))}
+        </div>
+    );
+}
+
+
+//
+
+/*
+const alfabeto = []
+    for(let i = 65; i <= 90; i++){
+        alfabeto.push(String.fromCharCode(i))
+    }
+
+const alfabeto = [
         {id: 1, letra: "A", clicou: false}, {id: 2, letra: "B", clicou: false}, {id: 3, letra: "C", clicou: false}, {id: 4, letra: "D", clicou: false},
         {id: 5, letra: "E", clicou: false}, {id: 6, letra: "F", clicou: false}, {id: 7, letra: "G", clicou: false}, {id: 8, letra: "H", clicou: false},
         {id: 9, letra: "I", clicou: false}, {id: 10, letra: "J", clicou: false}, {id: 11, letra: "K", clicou: false}, {id: 12, letra: "L", clicou: false},
@@ -10,6 +37,7 @@ export default function Teclado (){
         {id: 21, letra: "U", clicou: false}, {id: 22, letra: "V", clicou: false}, {id: 23, letra: "W", clicou: false}, {id: 24, letra: "X", clicou: false},
         {id: 25, letra: "Y", clicou: false}, {id: 26, letra: "Z", clicou: false}, 
     ];
+
 
     const [letras, setLetras] = useState(alfabeto)
 
@@ -34,4 +62,4 @@ export default function Teclado (){
             ))}
         </div>
     );
-}
+*/
