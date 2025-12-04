@@ -333,12 +333,8 @@
       "id": 39
     },
     {
-      "createdAt": "2024-10-28T19:25:58.100071Z",
-      "nome": "Gustavo Ferreira",
-      "email": "gustavo.ferreira@example.com",
-      "telefones": [
-        "(68) 91055-2489"
-      ],
+      "nome": "Matheus",
+      "email": "matheus.m@teste.com",
       "id": 40
     },
     {
@@ -350,15 +346,6 @@
         "(19) 96349-1380"
       ],
       "id": 41
-    },
-    {
-      "createdAt": "2024-11-24T19:25:58.100090Z",
-      "nome": "Bruno Fernandes",
-      "email": "bruno.fernandes@example.com",
-      "telefones": [
-        "(49) 94033-4367"
-      ],
-      "id": 42
     },
     {
       "createdAt": "2024-10-29T19:25:58.100100Z",
@@ -437,11 +424,6 @@
         "(68) 91442-3609"
       ],
       "id": 50
-    },
-    {
-      "nome": "Novo Contato novo Nome",
-      "email": "novoContato@example.com",
-      "id": 51
     },
     {
       "nome": "vv",
